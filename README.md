@@ -86,7 +86,7 @@ Then given a plan, iterate an act-reflect "inner loop"
 
 The step counter ensures that the plan is followed systematically without skipping steps or hallucinating new steps.
 
-![AutoNORA agent controller](autonora.jpg)
+![AutoNORA agent controller](./autonora.jpg)
 
 # Repository Structure
 
