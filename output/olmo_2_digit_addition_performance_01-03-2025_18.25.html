@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characterizing OLMo's Performance on Two-Digit Addition Tasks</title>
+    <style>
+              body {
+	              font-family: 'Arial', sans-serif;
+	              margin: 20px;
+	              line-height: 1.6;
+	          }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        address {
+            margin-top: 20px;
+            font-style: normal;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        summary {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Characterizing OLMo's Performance on Two-Digit Addition Tasks</h1>
+        <i>AUTONORA</i><br>
+        <i>Allen Institute for AI, Seattle, WA</i></br>
+	<i>01-03-2025 18:25:57</i><br>
+	<tt>autonora@allenai.org</tt>
+    </header>
+
+<section>    
+<h3>Abstract</h3>
+<i>
+This study aimed to characterize the performance of the language model OLMo on two-digit addition problems. We generated a dataset of 30 numerical addition questions, collected answers from OLMo, and scored them using GPT-as-judge to assess accuracy. Further analysis involved categorizing questions based on difficulty as perceived by OLMo's performance. Our findings revealed that OLMo's ability to solve two-digit addition varies significantly across different types of numerical problems, with specific patterns of errors associated with certain categories. This research highlights the strengths and limitations of OLMo in mathematical reasoning tasks and underscores the importance of tailored datasets for evaluating AI models in specific domains.
+</i>
+</section>
+    
+
+<section>
+<h2>Introduction</h2>
+The ability of language models to perform arithmetic operations is a fundamental aspect of their overall utility and intelligence. As these models become more integrated into various applications, understanding their mathematical capabilities is crucial for developers and users alike. This research was motivated by the need to evaluate the proficiency of the language model OLMo in handling basic arithmetic, specifically two-digit addition, which is a common task that can reflect on its computational accuracy.
+
+In this study, we generated a dataset comprising 30 questions involving two-digit addition problems. We then engaged OLMo to provide answers to these questions and used GPT-as-judge to score the correctness of each answer on a scale from 0 (completely incorrect) to 1 (completely correct). To gain deeper insights into OLMo's performance patterns, we ideated categories that could potentially explain variations in difficulty levels experienced by OLMo. These categories were then scored based on how well they correlated with OLMo's performance.
+
+Our main findings indicate that OLMo's performance on two-digit addition tasks is not uniform across all types of problems. Certain categories of questions were consistently more challenging for the model, suggesting specific limitations in its computational abilities. The results of this study provide valuable information about where OLMo excels and where it may require further training or refinement, offering guidance for future improvements and applications of language models in numerical contexts.
+</section>
+
+<section>
+  <h2>Approach</h2>
+The approach taken in this study involved several structured steps to evaluate OLMo's performance on two-digit addition problems:
+
+<ol>
+<li><strong>Dataset Generation:</strong> We began by generating a dataset of 30 unique two-digit addition questions. The numbers for each question were chosen to ensure a diverse range of sums, including those that cross the hundred threshold and those that do not.</li>
+<li><strong>Answer Collection:</strong> Each question was presented to OLMo, and its answers were collected. The responses were stored in a DataFrame alongside the corresponding questions for subsequent analysis.</li>
+<li><strong>Scoring Answers:</strong> To assess the accuracy of OLMo's answers, we employed GPT-as-judge, which scored each answer on a scale from 0 to 1. This score was based on the correctness of the answer provided by OLMo. Justifications for each score were also collected to provide context for the numerical assessment.</li>
+<li><strong>Ideation of Categories:</strong> With the goal of identifying patterns in OLMo's performance, we ideated categories that could potentially characterize questions where OLMo performed poorly versus those it answered correctly. This step involved sampling high-scoring and low-scoring questions and using GPT to suggest possible categories that might explain differences in difficulty levels.</li>
+<li><strong>Scoring Categories:</strong> Once categories were suggested, we used them to sort the original set of questions based on how well they fit into each category. We then calculated an average score for each category based on OLMo's performance on the associated questions. This allowed us to identify which categories correlated with higher or lower performance by OLMo.</li>
+</ol>
+
+This methodical approach enabled us to systematically analyze OLMo's computational abilities and identify specific areas where its arithmetic reasoning could be improved.
+</section>
+
+<section>
+<h2>Results</h2>
+The experimental results of this study provided a detailed look at OLMo's capabilities in performing two-digit addition. The key findings are as follows:
+
+<ol>
+<li><strong>Accuracy of Answers:</strong> OLMo's answers to the 30 two-digit addition questions varied in accuracy, with scores ranging from 0 to 1. The model demonstrated a perfect score on several questions, indicating a strong ability to perform basic arithmetic operations correctly in some cases.</li>
+<li><strong>Scoring Justifications:</strong> GPT-as-judge provided justifications for each score, which often highlighted whether OLMo had performed the calculation correctly or made an error. These justifications served as qualitative insights into the types of errors and successes OLMo experienced.</li>
+<li><strong>Categories of Difficulty:</strong> Three categories were ideated to explain variations in question difficulty based on OLMo's performance:
+    <ul>
+        <li>"Sum Results in a Two-Digit Number" - Questions where the sum resulted in a two-digit number.</li>
+        <li>"Crossing the Hundred Threshold" - Questions where the sum crossed from two digits to three (e.g., resulting in a sum greater than 100).</li>
+        <li>"Presence of Round Numbers" - Questions that involved round numbers (ending in zero).</li>
+    </ul>
+</li>
+<li><strong>Category Performance Scores:</strong> Each category was scored based on how well it correlated with OLMo's performance. The average scores for each category were:
+    <ul>
+        <li>"Sum Results in a Two-Digit Number" - Average Score: 0.600</li>
+        <li>"Crossing the Hundred Threshold" - Average Score: 0.850</li>
+        <li>"Presence of Round Numbers" - Average Score: 0.333</li>
+    </ul>
+These scores indicated that OLMo performed best when sums crossed the hundred threshold and struggled most with questions involving round numbers.
+</li>
+<li><strong>Top Performing Categories:</strong> "Crossing the Hundred Threshold" emerged as the category where OLMo performed best, followed by "Sum Results in a Two-Digit Number." Conversely, these categories also represented areas where performance was weakest, suggesting that while OLMo can handle certain problems within these categories well, others pose significant challenges.</li>
+</ol>
+
+These results provide insight into specific strengths and weaknesses of OLMo's computational abilities and highlight areas for potential improvement and further investigation.
+</section>
+
+<section>
+<h2>Conclusion</h2>
+The research conducted provides a comprehensive assessment of OLMo's performance on two-digit addition problems. The main conclusions drawn from this study are:
+
+<ol>
+<li>OLMo is capable of correctly solving two-digit addition problems, but its performance is inconsistent across different types of numerical questions.</li>
+<li>The model demonstrated the highest accuracy in questions where the sum crossed the hundred threshold, suggesting a proficiency in handling carry-over operations in addition.</li>
+<li>OLMo struggled significantly with questions involving round numbers, indicating a potential area of weakness in its arithmetic processing or pattern recognition capabilities.</li>
+<li>The presence of specific patterns within the questions influenced OLMo's ability to provide correct answers, as evidenced by the categories that were identified and scored based on their correlation with OLMo's performance.</li>
+</ol>
+
+These findings underscore the importance of nuanced evaluation methods for language models like OLMo when it comes to mathematical tasks. While OLMo shows promise in computational reasoning, there is room for improvement, particularly in dealing with certain numerical formats and structures. Future work could focus on enhancing OLMo's training on problematic categories or developing specialized models for arithmetic tasks.
+</section>
+
+<h3>Notes</h3>
+159 GPT calls, 30 OLMo calls, 0 Together calls.
+Runtime: 11 minutes.
+
+
+
+

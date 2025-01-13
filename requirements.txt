@@ -1,0 +1,5 @@
+
+Files I've had to also pip install on top of base:
+
+pdfminer.six
+
