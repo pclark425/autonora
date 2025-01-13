@@ -371,7 +371,7 @@ def reflect(prompt, state):
             observation = f"Too many retries! I seem to be stuck on step {state.step_number}. Let's abandon this effort and replan.\n"
             print(observation, end="")
             observations += observation
-            state.update(mode="plan")
+            state.update(mode="replan")
         else:
             retry_counter += 1
             observation = f"An error occurred doing step {state.step_number}. Let's try and debug the problem and retry (retry number {retry_counter}).\n\n"
