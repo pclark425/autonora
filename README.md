@@ -7,8 +7,11 @@ For examples, see the /output directory. The .html files are (rather naive) fina
 # Usage
 
 1. Make sure you have your OpenAI key set in the environment variable OPENAI_API_KEY. Optional: If you also want to use Mistral/LLama, also set TOGETHER_API_KEY. If you want to use OLMo, also create and set your INFERD_TOKEN (see https://github.com/allenai/inferd/blob/main/docs/UserGuide.md).
-2. Then do:
-
+2. In your environment, do
+```
+pip install -r requirements.txt
+```
+3. To run, start ipython and do:
 ```
 $ ipython
 In [1]: %run autonora_agent
