@@ -1,10 +1,18 @@
 
 import time
 import numpy as np
+import os
 
-MY_OAI_KEY = print("Add your OAI key to my_globals.py to proceed!")
-MY_TOGETHER_KEY = print("Add your Together key to my_globals.py to proceed (if you want to use Mistral or Llama)!")
-MY_INFERD_TOKEN = print("Add your InferD token to my_globals.py to proceed (if you want to use OLMo)!")
+MY_OAI_KEY = os.environ.get("OPENAI_API_KEY")
+MY_TOGETHER_KEY = os.environ.get("TOGETHER_API_KEY")
+MY_INFERD_TOKEN = os.environ.get("INFERD_TOKEN")
+
+if MY_OAI_KEY is None:
+    print("Please set your OPENAI_API_KEY environment variable to continue!")
+if MY_TOGETHER_KEY is None:
+    print("Please set your TOGETHER_API_KEY environment variable if you want to use Mistral and/or Llama!")
+if MY_INFERD_TOKEN is None:
+    print("Please set your INFERD_TOKEN environment variable if you want to use OLMo!")
 
 # counters
 gpt_calls = 0
