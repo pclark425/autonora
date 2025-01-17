@@ -21,7 +21,7 @@ What is the next research task you'd like me to do (or 'q' to quit)? End with a 
 
 ```
 
-**NOTE** hit _**twice**_ after you enter your task. If nothing seems to be happening, it's likely because you need to hit a second time.
+**NOTE** hit \<return\> _**twice**_ after you enter your task. If nothing seems to be happening, it's likely because you need to hit \<return\> a second time.
 
 Some example tasks you can try:
 
